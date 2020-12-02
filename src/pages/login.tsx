@@ -1,3 +1,7 @@
+import Input from '../Components/Input';
+import Button from '../Components/Button';
+import Header from '../Components/Header';
+
 import {
     Container,
     Main,
@@ -7,14 +11,13 @@ import {
     Title,
     ForgotPassword,
     LoginBoxForm,
-    SignUpLink
+    SignUpLink,
+    SignUpDiv
 } from '../styles/pages/Login/styles';
 
-import Input from '../Components/Input';
-import Button from '../Components/Button';
-import Header from '../Components/Header';
+import {FiLogIn} from 'react-icons/fi';
 
-const Login:React.FC = () =>{
+const Login:React.FC = () => {
     return (
     <Container>
         <Header>
@@ -31,7 +34,14 @@ const Login:React.FC = () =>{
                     <Button type="submit">Entrar</Button>
                 </LoginBoxForm>
             </LoginBox>
-            <SignUpLink>Novo por aqui, faça seu cadastro</SignUpLink>
+
+            <SignUpLink href="http://localhost:3000/signup">
+                <SignUpDiv>
+                    Novo por aqui, faça seu cadastro
+                    <FiLogIn size={24} color="#fff" />
+                </SignUpDiv>
+            </SignUpLink>
+            
         </Main>
     </Container>
     );

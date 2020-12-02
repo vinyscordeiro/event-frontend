@@ -5,4 +5,6 @@ export const Container = styled.header`
     height: 92px;
     padding-left: 72px;
     align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 0.3em black;
 `;

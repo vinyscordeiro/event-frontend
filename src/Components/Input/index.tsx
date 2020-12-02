@@ -1,5 +1,7 @@
 import {InputHTMLAttributes} from 'react';
-import {Container, BlueDiv, InputDiv, InputElement} from '../../styles/Components/Input';
+import {Container, BlueDiv, InputElement} from '../../styles/Components/Input';
+
+import {FiMail} from 'react-icons/fi';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
     name: string;
@@ -10,11 +12,9 @@ const Input: React.FC<InputProps> = ({name,icon,...rest}) => {
     return(
         <Container>
             <BlueDiv>
-                
+                <FiMail size={24} color="#fff"/>
             </BlueDiv>
-            <InputDiv>
-                <InputElement {...rest}/>
-            </InputDiv>
+            <InputElement {...rest}/>
         </Container>
     );
 };

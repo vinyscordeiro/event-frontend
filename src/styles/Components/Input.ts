@@ -1,25 +1,31 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    flex:1;
-    height: 44px;
+    display: flex;
+    height: 48px;
+    width: 280px;
+    box-shadow: 0 0 0.2em grey;
+    margin-top: 20px;
 `;
 
 export const BlueDiv = styled.div`
+    display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #4661C2;
     width: 60px;
-`;
-
-export const InputDiv = styled.div`
-    align-items: center
+    height: 100%;
 `;
 
 export const InputElement = styled.input`
+    margin: 0 15px;
+    width: 220px;
+    height: 100%;
     outline: 0;
-    flex: 1;
+    border: 0;
 
     &::placeholder{
         color: #635A5A;
+        font-size: 14px;
     }
 `;
