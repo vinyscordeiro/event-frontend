@@ -14,11 +14,6 @@ export const Main = styled.main`
     justify-content: center;
 `;
 
-export const Name = styled.h1`
-    font-size: 48px;
-    color: #000;
-`;
-
 export const Warning = styled.h1`
     margin-top: 94px;
     font-size: 72px;

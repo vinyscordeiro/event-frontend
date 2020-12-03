@@ -3,11 +3,11 @@ import Header from '../Components/Header';
 
 import {
     Container,
-    Main,
-    Name,
     SignUpDiv,
     SignUpCenteredDiv,
     Title,
+    ChangeView,
+    View,
     ButtonAdapted,
     SignUpForm,
     SignInLink,
@@ -16,17 +16,19 @@ import {
 
 import {FiLogIn} from 'react-icons/fi';
 
-const Login:React.FC = () => {
+const SignUp:React.FC = () => {
     return (
     <Container>
-        <Header>
-            <Name>EVNTO</Name>
-        </Header>
-        <Main>
+        <Header />
             <SignUpDiv>
                 <SignUpCenteredDiv>
                     <SignUpForm>
                         <Title>Cadastro</Title>
+
+                        <ChangeView>
+                            <View />
+                            <View />
+                        </ChangeView>
 
                         <Input name="name" placeholder="Nome"/>
                         <Input name="user" placeholder="Usuário"/>
@@ -48,10 +50,8 @@ const Login:React.FC = () => {
 
                 </SignUpCenteredDiv>
             </SignUpDiv>
-
-        </Main>
     </Container>
     );
 }
 
-export default Login;
+export default SignUp;

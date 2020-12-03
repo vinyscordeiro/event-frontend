@@ -4,42 +4,36 @@ import Button from '@/Components/Button/index';
 export const Container = styled.div`
     width: 100vw;
     height: 100vh;
-    background: #253A44 url('./assets/background3.jpg') no-repeat fixed;
+    background: #253A44 url('./assets/background4.jpg') no-repeat fixed;
     background-size: cover;
     display: flex;
     flex-direction: column;
 `;
 
-export const ChangeView = styled.div`
-    margin-top: 15px;
+export const ForgotPasswordDiv = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-`;
-
-export const View = styled.div`
-    width: 132px;
-    height: 3px;
-    background-color: #4F7EF4;
-`;
-
-export const SignUpDiv = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: #fff;
     width: 616px;
     height: 100%;
     margin-left: auto;
+    flex-direction: column;
+
 `;
-
-export const SignUpCenteredDiv = styled.div``;
-
-export const SignUpForm = styled.form``;
+export const ForgotPasswordForm = styled.form`
+    margin: auto;
+`;
 
 export const Title = styled.h2`
     font-size: 48px;
     font-weight: 400;
+    margin-left: auto;
+`;
+
+export const Subtitle = styled.h3`
+    font-size: 18px;
+    font-weight: 400;
+    color: #635A5A;
+    padding-bottom: 30px;
 `;
 
 export const ButtonAdapted = styled(Button)`
@@ -48,7 +42,7 @@ export const ButtonAdapted = styled(Button)`
 
 export const SignInDiv = styled.div`
     display: flex;
-    margin-top: 50px;
+    margin-top: 120px;
     justify-content: center;
 
     > svg {

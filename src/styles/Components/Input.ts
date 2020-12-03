@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: flex;
     height: 48px;
-    width: 280px;
+    width: 316px;
     box-shadow: 0 0 0.2em grey;
     margin-top: 20px;
 `;
@@ -18,7 +18,7 @@ export const BlueDiv = styled.div`
 `;
 
 export const InputElement = styled.input`
-    margin: 0 15px;
+    padding: 0 15px;
     width: 220px;
     height: 100%;
     outline: 0;

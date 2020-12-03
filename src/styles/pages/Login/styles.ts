@@ -3,19 +3,11 @@ import styled from 'styled-components';
 export const Container = styled.div`
     width: 100vw;
     height: 100vh;
-    background: #253A44 url('./assets/background1.jpg') center no-repeat fixed;
+    background: #253A44 url('./assets/background1.jpg') no-repeat fixed;
     background-size: cover;
-`;
-
-export const Main = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
-`;
-
-export const Name = styled.h1`
-    font-size: 48px;
-    color: #000;
 `;
 
 export const Logo = styled.h1`

@@ -1,7 +1,11 @@
-import {Container} from '../../styles/Components/Header';
+import {Container, Logo} from '../../styles/Components/Header';
 
 const Header: React.FC = ({children}) => {
-    return(<Container>{children}</Container>)
+    return(
+        <Container>
+            <Logo href="http://localhost:3000/login">EVNTO</Logo>
+            {children}
+        </Container>)
 };
 
 export default Header;
