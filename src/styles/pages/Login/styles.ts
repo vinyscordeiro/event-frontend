@@ -23,7 +23,7 @@ export const LoginBox = styled.div`
     width: 616px;
     height: 416px;
     min-width: 400px;
-    padding: 10px;
+    padding: 8px;
 `;
 
 export const LoginBoxForm = styled.form`
