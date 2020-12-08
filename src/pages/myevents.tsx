@@ -4,12 +4,15 @@ import {
     Container,
     Title,
     EventsDiv,
+    EventSelection,
     Subtitle,
     Event,
     EventContainer,
     EventTitle,
     EventText
 } from '../styles/pages/MyEvents/styles';
+
+import {FiInfo} from 'react-icons/fi';
 
 const MyEvents:React.FC = () => {
     return (
@@ -18,7 +21,12 @@ const MyEvents:React.FC = () => {
             <Title>Meus Eventos</Title>
 
             <EventsDiv>
-                <Subtitle>Acontecendo agora</Subtitle>
+                <EventSelection>
+                    <Subtitle>Acontecendo agora</Subtitle>
+                    <Subtitle>Próximos eventos</Subtitle>
+                    <Subtitle>Eventos Passados</Subtitle>
+                </EventSelection>
+              
                 <Event>
                     <EventContainer>
                         <EventTitle>Nome:</EventTitle>
@@ -38,11 +46,43 @@ const MyEvents:React.FC = () => {
                     </EventContainer>
                 </Event>
 
-                <Subtitle>Próximos eventos</Subtitle>
-                <Event></Event>
+                <Event>
+                    <EventContainer>
+                        <EventTitle>Nome:</EventTitle>
+                        <EventText>Vinicius Silva Cordeiro</EventText>
+                    </EventContainer>
+                    <EventContainer>
+                        <EventTitle>Data:</EventTitle>
+                        <EventText>20/12/2020</EventText>
+                    </EventContainer>
+                    <EventContainer>
+                        <EventTitle>Local:</EventTitle>
+                        <EventText>Fazenda Mucugê</EventText>
+                    </EventContainer>
+                    <EventContainer>
+                        <EventTitle>Status:</EventTitle>
+                        <EventText>Disponível</EventText>
+                    </EventContainer>
+                </Event>
 
-                <Subtitle>Eventos</Subtitle>
-                <Event></Event>
+                <Event>
+                    <EventContainer>
+                        <EventTitle>Nome:</EventTitle>
+                        <EventText>Vinicius Silva Cordeiro</EventText>
+                    </EventContainer>
+                    <EventContainer>
+                        <EventTitle>Data:</EventTitle>
+                        <EventText>20/12/2020</EventText>
+                    </EventContainer>
+                    <EventContainer>
+                        <EventTitle>Local:</EventTitle>
+                        <EventText>Fazenda Mucugê</EventText>
+                    </EventContainer>
+                    <EventContainer>
+                        <EventTitle>Status:</EventTitle>
+                        <EventText>Disponível</EventText>
+                    </EventContainer>
+                </Event>
             </EventsDiv>          
 
         </Container>

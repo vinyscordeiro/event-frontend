@@ -19,11 +19,27 @@ export const Title = styled.h1`
 
 export const EventsDiv = styled.div`
    width: 960px;
+   margin-top: 48px;
+`;
+
+export const EventSelection = styled.div`
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   margin-bottom: 24px;
 `;
 
 export const Subtitle = styled.div`
     color: #FFF;
-    font-weight: 18px;
+    font-size: 18px;
+    margin-right: 32px;
+    border-bottom: 2px solid transparent;
+
+    &:hover{
+        padding-bottom: 4px;
+        border-bottom: 2px solid #4661C2;
+        color: #4661C2;
+    }
 `;
 
 export const Event = styled.div`
@@ -34,10 +50,13 @@ export const Event = styled.div`
     align-items: center;
     justify-content: space-around;
     border: 1px solid #fff;
+    border: 4px solid #fff;
+    margin-top: 4px;
+    opacity: 0.9;
 
-    &:hover{
-        border: 1px solid #4661C2;
-        color: #4661C2;
+    &:hover {
+        border: 4px solid #4661C2;
+        opacity: 1;
     }
 `;
 

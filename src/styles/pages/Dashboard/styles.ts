@@ -28,8 +28,8 @@ export const SearchResponseUnit = styled.div`
     display:flex;
     justify-content: space-around;
     align-items: center;
-    border-left: 3px solid #4F7EF4 ;
-    height: 40px;
+    
+    height: 48px;
     border-radius: 2px;
 
     &:hover{
@@ -41,7 +41,7 @@ export const Info = styled.div`
     display: flex;
     justify-content: center;
 
-    svg{
+    svg {
         margin-right: 8px;
     }
 `;
