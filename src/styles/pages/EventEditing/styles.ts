@@ -36,34 +36,6 @@ export const EventTitle = styled.div`
     color: #fff;
 `;
 
-export const EventButton = styled.button`
-    background: #43A018;
-    cursor: pointer;
-    width: 339px;
-    height: 64px;
-    border-radius: 0;
-
-    font-family: 'Reem Kufi', sans-serif;
-    -webkit-font-smoothing: antialised;
-    font-size: 24px;
-    color: #FFF;
-
-    border: 1px solid #43A018;
-    box-shadow: inset 0 0 20px rgba(67, 160, 24, 0.3);
-    outline: 1px solid ;
-    outline-color: rgba(67, 160, 24, .5);
-    outline-offset: 0px;
-    text-shadow: none;
-    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-
-    &:hover {
-        box-shadow: inset 0 0 20px rgba(67, 160, 24, .5), 0 0 20px rgba(67, 160, 24, .2);
-        outline-color: rgba(67, 160, 24, 0);
-        outline-offset: 15px;
-    }
-    
-`;
-
 export const EventDays = styled.div`
     width: 100%;
     height: 55px;
@@ -98,35 +70,20 @@ export const EventBar = styled.div`
     width: 344px;
 `;
 
-export const EventRegistration = styled.div`
+export const EventAlterButton = styled.div`
     background-color: #4E7EF4;
     height: 88px;
+    border: 4px solid #4E7EF4;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-
-`;
-
-export const EventRegistrationTitle = styled.div`
-    color: #fff;
-    font-size: 16px;
-`;
-
-export const EventRegistrationText = styled.div`
-    max-width: 180px;
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
+    font-size: 24px;
+    color: #FFF;
 
     > svg {
-        margin-right: 8px;
+        margin-right: 16px;
     }
-`;
 
-export const EventRegistrationDate = styled.div`
-    color: #fff;
-    font-size: 24px;
 `;
 
 export const EventBarInfo = styled.div`

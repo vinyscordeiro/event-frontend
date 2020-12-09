@@ -3,7 +3,7 @@ import {
     EventDiv,
     EventDescription,
     EventInfo,
-    EventDescriptionDiv,
+    EventDescriptionAlignment,
     EventTitle,
     EventButton,
     EventDays,
@@ -16,10 +16,17 @@ import {
     EventRegistrationTitle,
     EventRegistrationDate,
     EventRegistrationText,
+    EventBarInfo,
+    EventBarTitle,
+    EventBarSubtitle,
+    EventBarSubtitleTextDiv,
+    EventBarTextBig,
+    EventBarTextNormal,
+    EventBarTextSmall,
 } from '../styles/pages/EventUse/styles';
 
 import Header from '../Components/Header';
-import { FiCalendar } from 'react-icons/fi';
+import { FiCalendar, FiMap } from 'react-icons/fi';
 
 const EventUse: React.FC = () => {
     return(
@@ -27,14 +34,14 @@ const EventUse: React.FC = () => {
             <Header />
             <EventDiv>
                 <EventDescription>
-                    <EventDescriptionDiv>
+                    <EventDescriptionAlignment>
                         <EventTitle>
                             Seguindo seus passos
                         </EventTitle>
                         <EventButton>Quero participar</EventButton>
-                    </EventDescriptionDiv>
+                    </EventDescriptionAlignment>
                     <EventDays>
-                        Faltam 4 dias
+                        FALTAM 4 DIAS
                     </EventDays>
                 </EventDescription>
 
@@ -53,6 +60,7 @@ const EventUse: React.FC = () => {
                    </EventInfoDiv>
 
                    <EventBar>
+
                        <EventRegistration>
                            <EventRegistrationTitle>Inscrições até</EventRegistrationTitle>
                            <EventRegistrationText>
@@ -60,6 +68,36 @@ const EventUse: React.FC = () => {
                                <EventRegistrationDate>24/12/2020</EventRegistrationDate>
                            </EventRegistrationText>
                        </EventRegistration>
+
+                       <EventBarInfo>
+                           <EventBarTitle>Data</EventBarTitle>
+                           <EventBarSubtitle>
+                               <FiCalendar size={24} color="#000" />
+                               <EventBarTextBig>24/12/2020</EventBarTextBig>
+                           </EventBarSubtitle>
+                       </EventBarInfo>
+
+                       <EventBarInfo>
+                           <EventBarTitle>Local</EventBarTitle>
+                           <EventBarSubtitle>
+                               <FiMap size={24} color="#000" />
+                                <EventBarSubtitleTextDiv>
+                                    <EventBarTextBig>Fazenda Mucugê</EventBarTextBig>
+                                    <EventBarTextSmall>Rua de santa apolonia 9D Lisboa</EventBarTextSmall>
+                                </EventBarSubtitleTextDiv>
+                           </EventBarSubtitle>
+                       </EventBarInfo>
+
+                       <EventBarInfo>
+                           <EventBarTitle>Organizador</EventBarTitle>
+                           <EventBarSubtitle>
+                               <FiCalendar size={24} color="#000" />
+                               <EventBarSubtitleTextDiv>
+                                    <EventBarTextNormal>@juliasilva</EventBarTextNormal>
+                                    <EventBarTextNormal>Julia Silva Montano</EventBarTextNormal>
+                               </EventBarSubtitleTextDiv>
+                           </EventBarSubtitle>
+                       </EventBarInfo>
                    </EventBar>
                 </EventInfo>  
                 
