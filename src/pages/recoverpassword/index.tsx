@@ -1,5 +1,7 @@
-import Input from '../Components/Input';
-import Header from '../Components/Header';
+import Link from 'next/link';
+
+import Input from '@/Components/Input';
+import Header from '@/Components/Header';
 
 import {
     Container,
@@ -10,7 +12,7 @@ import {
     RecoverPasswordForm,
     SignInLink,
     SignInDiv
-} from '../styles/pages/RecoverPassword/styles';
+} from '@/styles/pages/RecoverPassword/styles';
 
 import {FiLogIn} from 'react-icons/fi';
 
@@ -28,12 +30,14 @@ const RecoverPassword:React.FC = () => {
 
                 <ButtonAdapted type="submit">Alterar Senha</ButtonAdapted>
 
-                <SignInLink href="http://localhost:3000/login">
-                    <SignInDiv>
-                        <FiLogIn size={24} color="#000" />
-                        Voltar para Login
-                    </SignInDiv>
-                </SignInLink>
+                <Link href="/login" passHref>
+                    <SignInLink>
+                        <SignInDiv>
+                            <FiLogIn size={24} color="#000" />
+                            Voltar para Login
+                        </SignInDiv>
+                    </SignInLink>
+                </Link>
 
             </RecoverPasswordForm>
         </RecoverPasswordDiv>

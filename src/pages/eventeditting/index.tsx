@@ -16,10 +16,10 @@ import {
     EventBarTextBig,
     EventBarTextNormal,
     EventBarTextSmall,
-} from '../styles/pages/EventEditing/styles';
+} from '@/styles/pages/EventEditing/styles';
 
-import Header from '../Components/Header';
-import TextField from '../Components/TextField';
+import Header from '@/Components/Header';
+import TextField from '@/Components/TextField';
 import { FiCalendar, FiMap, FiSave } from 'react-icons/fi';
 
 const EventEditing: React.FC = () => {
@@ -66,8 +66,6 @@ const EventEditing: React.FC = () => {
                                </EventBarSubtitleTextDiv>
                            </EventBarSubtitle>
                        </EventBarInfo>
-
-                      
 
                        <EventBarInfo>
                            <EventBarTitle>Data</EventBarTitle>

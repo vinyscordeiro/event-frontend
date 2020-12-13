@@ -19,18 +19,19 @@ export const Logo = styled.h1`
 
 export const SearchResponseBox = styled.div`
     width: 704px; 
-    background-color: #E9E9E9;
     margin-top: 48px;
     border-radius: 2px;
 `;
 
 export const SearchResponseUnit = styled.div`
+    background-color: #E9E9E9;
     display:flex;
     justify-content: space-around;
     align-items: center;
     
     height: 48px;
     border-radius: 2px;
+    margin-top: 8px;
 
     &:hover{
         background-color: #c4c4c4;

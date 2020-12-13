@@ -1,11 +1,11 @@
-import Header from '../Components/Header';
+import Header from '@/Components/Header';
 
 import {
     Container,
     Main,
     Warning,
     Subtitle
-} from '../styles/pages/404/styles';
+} from '@/styles/pages/404/styles';
 
 const Login:React.FC = () => {
     return (

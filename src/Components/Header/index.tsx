@@ -1,9 +1,12 @@
+import Link from 'next/link';
 import {Container, Logo} from '../../styles/Components/Header';
 
 const Header: React.FC = ({children}) => {
     return(
         <Container>
-            <Logo href="http://localhost:3000/login">EVNTO</Logo>
+            <Link href="/" passHref>
+                <Logo>EVNTO</Logo>
+            </Link>
             {children}
         </Container>)
 };

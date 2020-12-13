@@ -20,10 +20,12 @@ export const Logo = styled.h1`
 export const LoginBox = styled.div`
     background-color: #4661C2;
     margin-top: 64px;
+    margin-bottom: 50px;
     width: 616px;
     height: 416px;
     min-width: 400px;
     padding: 8px;
+
 `;
 
 export const LoginBoxForm = styled.form`
@@ -50,11 +52,11 @@ export const ForgotPassword = styled.a`
 `;
 export const SignUpDiv = styled.div`
     display: flex;
-    margin-top: 50px;
     justify-content: center;
+    align-items: center;
 
     > svg {
-        margin: 2px 0 0 4px;
+        margin-left: 8px;
     }
 `;
 

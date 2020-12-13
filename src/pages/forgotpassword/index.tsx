@@ -1,5 +1,7 @@
-import Input from '../Components/Input';
-import Header from '../Components/Header';
+import Link from 'next/link';
+
+import Input from '@/Components/Input';
+import Header from '@/Components/Header';
 
 import {
     Container,
@@ -10,7 +12,7 @@ import {
     ForgotPasswordForm,
     SignInLink,
     SignInDiv
-} from '../styles/pages/ForgotPassword/styles';
+} from '@/styles/pages/ForgotPassword/styles';
 
 import {FiLogIn} from 'react-icons/fi';
 
@@ -26,13 +28,15 @@ const ForgotPassword:React.FC = () => {
                 <Input name="mail" placeholder="Email"/>
 
                 <ButtonAdapted type="submit">Recuperar Senha</ButtonAdapted>
-
-                <SignInLink href="http://localhost:3000/login">
-                    <SignInDiv>
-                        <FiLogIn size={24} color="#000" />
-                        Voltar para Login
-                    </SignInDiv>
-                </SignInLink>
+                
+                <Link href="/login" passHref>
+                    <SignInLink>
+                        <SignInDiv>
+                            <FiLogIn size={24} color="#000" />
+                            Voltar para Login
+                        </SignInDiv>
+                    </SignInLink>
+                </Link>
 
             </ForgotPasswordForm>
         </ForgotPasswordDiv>

@@ -1,9 +1,10 @@
 import { useCallback } from 'react';
 import { useRouter } from 'next/router'; 
+import Link from 'next/link';
 
-import Input from '../Components/Input';
-import Button from '../Components/Button';
-import Header from '../Components/Header';
+import Input from '@/Components/Input';
+import Button from '@/Components/Button';
+import Header from '@/Components/Header'; 
 
 import {
     Container,
@@ -14,13 +15,13 @@ import {
     LoginBoxForm,
     SignUpLink,
     SignUpDiv
-} from '../styles/pages/Login/styles';
+} from '@/styles/pages/Login/styles';
 
 import {FiLogIn} from 'react-icons/fi';
 
 
 const Login:React.FC = () => {
-    const navigateToDashboard = useCallback(() => {
+    const navigateToDashboard = useCallback((e) => {
         const router = useRouter();
 
         router.push('/dashboard');
@@ -35,17 +36,21 @@ const Login:React.FC = () => {
                 <Title>Faça seu Login </Title>
                 <Input name="mail" placeholder="Email"/>
                 <Input name="password" placeholder="Senha"/>
-                <ForgotPassword href="http://localhost:3000/forgotpassword">Esqueceu sua senha ?</ForgotPassword>
+                <Link href="/forgotpassword" passHref>
+                    <ForgotPassword>Esqueceu sua senha ?</ForgotPassword>
+                </Link>
                 <Button type="submit"> Entrar</Button>
             </LoginBoxForm>
         </LoginBox>
 
-        <SignUpLink href="http://localhost:3000/signup">
-            <SignUpDiv>
-                Novo por aqui, faça seu cadastro
-                <FiLogIn size={24} color="#fff" />
-            </SignUpDiv>
-        </SignUpLink>
+        <Link href="/signup" passHref>
+            <SignUpLink >
+                <SignUpDiv>
+                    Novo por aqui, faça seu cadastro
+                    <FiLogIn size={24} color="#fff" />
+                </SignUpDiv>
+            </SignUpLink>
+        </Link>
 
     </Container>
     );

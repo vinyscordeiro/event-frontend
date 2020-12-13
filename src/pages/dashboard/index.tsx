@@ -1,5 +1,5 @@
-import Header from '../Components/Header';
-import SearchBox from '../Components/SearchBox';
+import Header from '@/Components/Header';
+import SearchBox from '@/Components/SearchBox';
 
 import {
     Container,
@@ -7,9 +7,9 @@ import {
     SearchResponseBox,
     SearchResponseUnit,
     Info,
-} from '../styles/pages/Dashboard/styles';
+} from '@/styles/pages/Dashboard/styles';
 
-import {FiCalendar, FiLogIn, FiMapPin} from 'react-icons/fi';
+import {FiCalendar, FiMapPin} from 'react-icons/fi';
 
 const Dashboard:React.FC = () => {
     return (

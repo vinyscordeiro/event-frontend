@@ -1,5 +1,5 @@
-import Input from '../Components/Input';
-import Header from '../Components/Header';
+import Input from '@/Components/Input';
+import Header from '@/Components/Header';
 
 import {
     Container,
@@ -12,7 +12,7 @@ import {
     View,
     ButtonView,
     ButtonDiv,
-} from '../styles/pages/Profile/styles';
+} from '@/styles/pages/Profile/styles';
 
 import {FiTool} from 'react-icons/fi';
 

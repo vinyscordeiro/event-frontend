@@ -1,5 +1,7 @@
-import Input from '../Components/Input';
-import Header from '../Components/Header';
+import Link from 'next/link';
+
+import Input from '@/Components/Input';
+import Header from '@/Components/Header';
 
 import {
     Container,
@@ -12,7 +14,7 @@ import {
     SignUpForm,
     SignInLink,
     SignInDiv
-} from '../styles/pages/SignUp/styles';
+} from '@/styles/pages/SignUp/styles';
 
 import {FiLogIn} from 'react-icons/fi';
 
@@ -41,12 +43,14 @@ const SignUp:React.FC = () => {
 
                     </SignUpForm>
 
-                    <SignInLink href="http://localhost:3000/login">
-                        <SignInDiv>
-                            <FiLogIn size={24} color="#000" />
-                            Voltar para Login
-                        </SignInDiv>
-                    </SignInLink>
+                    <Link href="login" passHref>
+                        <SignInLink>
+                            <SignInDiv>
+                                <FiLogIn size={24} color="#000" />
+                                Voltar para Login
+                            </SignInDiv>
+                        </SignInLink>
+                    </Link>
 
                 </SignUpCenteredDiv>
             </SignUpDiv>

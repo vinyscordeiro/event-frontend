@@ -1,4 +1,4 @@
-import Header from '../Components/Header';
+import Header from '@/Components/Header';
 
 import {
     Container,
@@ -10,9 +10,7 @@ import {
     EventContainer,
     EventTitle,
     EventText
-} from '../styles/pages/MyEvents/styles';
-
-import {FiInfo} from 'react-icons/fi';
+} from '@/styles/pages/MyEvents/styles';
 
 const MyEvents:React.FC = () => {
     return (

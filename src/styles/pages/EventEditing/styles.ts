@@ -88,7 +88,7 @@ export const EventAlterButton = styled.div`
 
 export const EventBarInfo = styled.div`
     width: 100%;
-    height: 112px;
+    min-height: 112px;
     border-left: 4px solid #4F7EF4;
     margin-top: 25px;
     padding-left: 25px;

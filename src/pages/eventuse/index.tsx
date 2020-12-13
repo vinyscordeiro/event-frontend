@@ -23,9 +23,9 @@ import {
     EventBarTextBig,
     EventBarTextNormal,
     EventBarTextSmall,
-} from '../styles/pages/EventUse/styles';
+} from '@/styles/pages/EventUse/styles';
 
-import Header from '../Components/Header';
+import Header from '@/Components/Header';
 import { FiCalendar, FiMap } from 'react-icons/fi';
 
 const EventUse: React.FC = () => {

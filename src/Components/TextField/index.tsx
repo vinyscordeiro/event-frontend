@@ -1,4 +1,4 @@
-import {InputHTMLAttributes} from 'react';
+import {InputHTMLAttributes, useCallback, useState} from 'react';
 import {Container, Placeholder, InputElement} from '../../styles/Components/TextField';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
@@ -6,13 +6,30 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
     title: string;
 }
 
-const Input: React.FC<InputProps> = ({name,title, ...rest}) => {
+const TextField: React.FC<InputProps> = ({name,title, ...rest}) => {
+    const [isFocused, setIsFocused] = useState(false);
+
+    const handleTextFieldFocus = useCallback(()=> {
+        setIsFocused(true);
+    }, []);
+
+    const handleTextFieldBlur = useCallback(()=> {
+        setIsFocused(false);
+    }, [])
+
     return(
-        <Container>
-            <Placeholder>{title}</Placeholder>
-            <InputElement {...rest}/>
+        <Container
+            isFocused={isFocused}
+        >
+            <Placeholder
+                isFocused={isFocused}
+            >{title}</Placeholder>
+            <InputElement 
+                onFocus={handleTextFieldFocus}
+                onBlur={handleTextFieldBlur}
+            {...rest}/>
         </Container>
     );
 };
 
-export default Input;
+export default TextField;
