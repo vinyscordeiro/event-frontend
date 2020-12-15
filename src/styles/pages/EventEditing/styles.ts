@@ -1,4 +1,9 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
+import Image from 'next/image';
+
+interface SmallTextProps {
+    isBlue?: Boolean;
+}
 
 export const Container = styled.div`
     width: 100%;
@@ -21,6 +26,7 @@ export const EventInfo = styled.div`
     justify-content: space-around;
     padding: 56px 0;
 `;
+
 
 export const EventDescriptionAlignment = styled.div`
     display: flex;
@@ -98,6 +104,45 @@ export const EventBarTitle = styled.div`
     font-size: 36px;
 `;
 
+export const EventBarBigText = styled.div`
+    font-size: 24px;
+`;
+
+export const EventBarMediumText = styled.div`
+    font-size: 18px;
+`;
+
+export const EventBarSmallText = styled.div<SmallTextProps>`
+    font-size: 10px;
+    color: #635A5A;
+
+    ${ props => props.isBlue && css`
+        color: #4F7EF4;
+    `}
+`;
+
+export const EventBarPhoto = styled(Image)`
+    border-radius: 50%;
+`;
+
+export const EventBarDateDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+`;
+
+export const EventBarDateIcon = styled.div`
+    height: 36px;
+    width: 36px;
+`;
+
+export const EventBarDateTitle = styled.div`
+    font-size: 18px;
+`;
+
+export const EventBarDateModal = styled.div`
+    
+`;
+
 export const EventBarSubtitle = styled.div`
     margin-top: 8px;
     display: flex;
@@ -112,17 +157,4 @@ export const EventBarSubtitle = styled.div`
 export const EventBarSubtitleTextDiv = styled.div`
     display: flex;
     flex-direction: column;
-`;
-
-export const EventBarTextBig = styled.div`
-    font-size: 24px;
-`;
-
-export const EventBarTextSmall = styled.div`
-    font-size: 10px;
-    color: #635A5A;
-`;
-
-export const EventBarTextNormal = styled.div`
-    font-size: 14px;
 `;

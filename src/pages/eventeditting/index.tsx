@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import {
     Container,
     EventDiv,
@@ -11,11 +13,16 @@ import {
     EventAlterButton,
     EventBarInfo,
     EventBarTitle,
+    EventBarBigText,
+    EventBarMediumText,
+    EventBarSmallText,
+    EventBarPhoto,
     EventBarSubtitle,
     EventBarSubtitleTextDiv,
-    EventBarTextBig,
-    EventBarTextNormal,
-    EventBarTextSmall,
+    EventBarDateDiv,
+    EventBarDateIcon,
+    EventBarDateTitle,
+    EventBarDateModal,
 } from '@/styles/pages/EventEditing/styles';
 
 import Header from '@/Components/Header';
@@ -60,19 +67,28 @@ const EventEditing: React.FC = () => {
                         <EventBarInfo>
                            <EventBarTitle>Organização</EventBarTitle>
                            <EventBarSubtitle>
-                               <FiCalendar size={24} color="#000" />
+                               <EventBarPhoto  
+                                    src="/assets/julia.jpg" 
+                                    alt="Julia"
+                                    width={40}
+                                    height={40}
+                                    unoptimized={true}
+                               />
                                <EventBarSubtitleTextDiv>
-                                    <EventBarTextNormal>Julia Silva Montano</EventBarTextNormal>
+                                    <EventBarMediumText>Julia Silva Montano</EventBarMediumText>
                                </EventBarSubtitleTextDiv>
                            </EventBarSubtitle>
                        </EventBarInfo>
 
                        <EventBarInfo>
                            <EventBarTitle>Data</EventBarTitle>
-                           <EventBarSubtitle>
-                               <FiCalendar size={24} color="#000" />
-                               <EventBarTextBig>24/12/2020</EventBarTextBig>
-                           </EventBarSubtitle>
+                            <EventBarDateDiv>
+                                <EventBarDateIcon>
+
+                                </EventBarDateIcon>
+                                <EventBarDateTitle>Indefinido</EventBarDateTitle>
+                                <EventBarDateModal>Indefinido</EventBarDateModal>
+                            </EventBarDateDiv>
                        </EventBarInfo>
 
                        <EventBarInfo>
@@ -80,8 +96,8 @@ const EventEditing: React.FC = () => {
                            <EventBarSubtitle>
                                <FiMap size={24} color="#000" />
                                 <EventBarSubtitleTextDiv>
-                                    <EventBarTextBig>Fazenda Mucugê</EventBarTextBig>
-                                    <EventBarTextSmall>Rua de santa apolonia 9D Lisboa</EventBarTextSmall>
+                                    <EventBarBigText>Fazenda Mucugê</EventBarBigText>
+                                    <EventBarSmallText>Rua de santa apolonia 9D Lisboa</EventBarSmallText>
                                 </EventBarSubtitleTextDiv>
                            </EventBarSubtitle>
                        </EventBarInfo>
