@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import {
     Container,
     EventDiv,
@@ -16,18 +14,29 @@ import {
     EventBarBigText,
     EventBarMediumText,
     EventBarSmallText,
-    EventBarPhoto,
-    EventBarSubtitle,
-    EventBarSubtitleTextDiv,
-    EventBarDateDiv,
-    EventBarDateIcon,
-    EventBarDateTitle,
-    EventBarDateModal,
+    EventDateEditDiv,
+    EventDateEditTitle,
+    EventDateEditInfo,
+    EventDateEditShow,
+    EventDateButton,
+    HostPhoto,
+    HostName,
+    HostDiv,
+    EventLocationDiv,
+    EventLocationInfoDiv,
+    EventLocationInfoTitle,
+    EventLocationAdress,
+    DefinitionDiv,
+    DefinitionTitle,
+    DefinitionButton,
+    DefinitionText,
 } from '@/styles/pages/EventEditing/styles';
+
+import BarComponent from '@/Components/BarComponent';
 
 import Header from '@/Components/Header';
 import TextField from '@/Components/TextField';
-import { FiCalendar, FiMap, FiSave } from 'react-icons/fi';
+import { FiCalendar, FiClipboard, FiEdit, FiMap, FiSave, FiEye } from 'react-icons/fi';
 
 const EventEditing: React.FC = () => {
     return(
@@ -64,44 +73,73 @@ const EventEditing: React.FC = () => {
                             Salvar alterações 
                         </EventAlterButton>
 
-                        <EventBarInfo>
-                           <EventBarTitle>Organização</EventBarTitle>
-                           <EventBarSubtitle>
-                               <EventBarPhoto  
+                        <BarComponent title="Organização">
+                            <HostDiv>
+                                <HostPhoto
                                     src="/assets/julia.jpg" 
                                     alt="Julia"
                                     width={40}
                                     height={40}
-                                    unoptimized={true}
-                               />
-                               <EventBarSubtitleTextDiv>
-                                    <EventBarMediumText>Julia Silva Montano</EventBarMediumText>
-                               </EventBarSubtitleTextDiv>
-                           </EventBarSubtitle>
-                       </EventBarInfo>
+                                    unoptimized={true}>
+                                </HostPhoto>
+                                <HostName>Julia Silva Montano</HostName>
+                            </HostDiv>
+                        </BarComponent>
 
-                       <EventBarInfo>
-                           <EventBarTitle>Data</EventBarTitle>
-                            <EventBarDateDiv>
-                                <EventBarDateIcon>
+                        <BarComponent title="Data">
+                            <EventDateEditDiv>
 
-                                </EventBarDateIcon>
-                                <EventBarDateTitle>Indefinido</EventBarDateTitle>
-                                <EventBarDateModal>Indefinido</EventBarDateModal>
-                            </EventBarDateDiv>
-                       </EventBarInfo>
+                                <EventDateEditTitle>Evento</EventDateEditTitle>
+                                <EventDateEditInfo>
+                                    <FiCalendar size={24} color="#000"/>
+                                    <EventDateEditShow>Indefinido</EventDateEditShow>
+                                    <EventDateButton>
+                                        Editar data
+                                        <FiEdit size={12} />
+                                    </EventDateButton>
+                                </EventDateEditInfo>
 
-                       <EventBarInfo>
-                           <EventBarTitle>Local</EventBarTitle>
-                           <EventBarSubtitle>
+                                <EventDateEditTitle>Inscrições</EventDateEditTitle>
+                                <EventDateEditInfo>
+                                    <FiCalendar size={24} color="#000"/>
+                                    <EventDateEditShow>Indefinido</EventDateEditShow>
+                                    <EventDateButton>
+                                        Editar data
+                                        <FiEdit size={12} />
+                                    </EventDateButton>
+                                </EventDateEditInfo>
+                                
+                            </EventDateEditDiv>
+                        </BarComponent>
+
+                        <BarComponent title="Local" >
+                            <EventLocationDiv>
                                <FiMap size={24} color="#000" />
-                                <EventBarSubtitleTextDiv>
-                                    <EventBarBigText>Fazenda Mucugê</EventBarBigText>
-                                    <EventBarSmallText>Rua de santa apolonia 9D Lisboa</EventBarSmallText>
-                                </EventBarSubtitleTextDiv>
-                           </EventBarSubtitle>
-                       </EventBarInfo>
+                                <EventLocationInfoDiv>
+                                    <EventLocationInfoTitle>Fazenda Mucugê</EventLocationInfoTitle>
+                                    <EventLocationAdress>Rua de santa apolonia 9D Lisboa</EventLocationAdress>
+                                </EventLocationInfoDiv>
+                           </EventLocationDiv>
+                        </BarComponent>
 
+                        <BarComponent title="Definições">
+
+                            <DefinitionDiv>
+                                <DefinitionTitle>Status</DefinitionTitle>
+                                <DefinitionButton>
+                                    <FiClipboard size={24} />
+                                    <DefinitionText>Confirmado</DefinitionText>
+                                </DefinitionButton>
+                            </DefinitionDiv>
+
+                            <DefinitionDiv>
+                                <DefinitionTitle>Visibilidade</DefinitionTitle>
+                                <DefinitionButton>
+                                    <FiEye size={24} />
+                                    <DefinitionText>Confirmado</DefinitionText>
+                                </DefinitionButton>
+                            </DefinitionDiv>
+                        </BarComponent>
                    </EventBar>
                 </EventInfo>  
                 

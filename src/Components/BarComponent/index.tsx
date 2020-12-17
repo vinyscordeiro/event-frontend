@@ -1,8 +1,21 @@
-import {Container} from '@/styles/Components/BarComponent';
+import {
+  Container, 
+  BCTitle
+} from '@/styles/Components/BarComponent';
 
-const BarComponent: React.FC = (children) => {
+interface BarComponentProps{
+  title?: string;
+  host?: Boolean; 
+
+}
+
+const BarComponent: React.FC<BarComponentProps> = ({
+  title, 
+  host,
+  children}) => {
   return (
     <Container>
+      <BCTitle>{title}</BCTitle>
       {children}
     </Container>
   )

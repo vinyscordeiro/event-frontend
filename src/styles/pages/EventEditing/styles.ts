@@ -21,12 +21,12 @@ export const EventDescription = styled.div`
 `;
 
 export const EventInfo = styled.div`
-    width: 100%;
+    width: 1360px;
     display: flex;
-    justify-content: space-around;
     padding: 56px 0;
+    margin: auto;
+    justify-content: space-between;    
 `;
-
 
 export const EventDescriptionAlignment = styled.div`
     display: flex;
@@ -74,6 +74,8 @@ export const EventText = styled.div`
 
 export const EventBar = styled.div`
     width: 344px;
+    margin-left: auto;
+    
 `;
 
 export const EventAlterButton = styled.div`
@@ -121,40 +123,123 @@ export const EventBarSmallText = styled.div<SmallTextProps>`
     `}
 `;
 
-export const EventBarPhoto = styled(Image)`
-    border-radius: 50%;
+// Date
+export const EventDateEditDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
 `;
 
-export const EventBarDateDiv = styled.div`
+export const EventDateEditTitle = styled.div`
+    font-size: 16px;
+    color: #4F7EF4;
     display: flex;
     flex-direction: row;
 `;
 
-export const EventBarDateIcon = styled.div`
-    height: 36px;
-    width: 36px;
+export const EventDateEditInfo = styled.div`
+    display: flex;
+    flex-direction: row;
+    margin-top: 4px;
+    align-items: center;
 `;
 
-export const EventBarDateTitle = styled.div`
-    font-size: 18px;
+
+export const EventDateEditShow = styled.div`
+    font-size: 24px;
+    margin-left: 12px;
 `;
 
-export const EventBarDateModal = styled.div`
-    
+export const EventDateButton = styled.button`
+    cursor: pointer;
+    font-size: 12px;
+    border: 0;
+    outline: 0;
+    margin-left: auto;
+    font-family: 'Reem Kufi', sans-serif;
+
+    > svg {
+        margin-left: 4px;
+    }
+
+    &:hover {
+        color:  #4F7EF4;
+
+        > svg {
+        color: #4F7EF4;
+        }
+    }
+
 `;
 
-export const EventBarSubtitle = styled.div`
-    margin-top: 8px;
+// Host
+
+export const HostDiv = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    > svg {
-        margin-right: 16px;
-    }
+    font-size: 18px;
+    margin: 4px 24px;
 `;
 
-export const EventBarSubtitleTextDiv = styled.div`
+export const HostName = styled.div`
+    margin-left: 16px;
+    font-size: 18px;
+`;
+
+export const HostPhoto = styled(Image)`
+    border-radius: 50%;
+`;
+
+// Location 
+
+export const EventLocationDiv = styled.div`
+    margin-left: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+`;
+
+export const EventLocationInfoDiv = styled.div`
+    margin-left: 16px;
+`;
+
+export const EventLocationInfoTitle = styled.div`
+    font-size: 24px;
+`;
+
+export const EventLocationAdress = styled.div`
+    font-size: 10px;
+    color: #635A5A;
+`;
+
+// Definition
+
+export const DefinitionDiv = styled.div`
+    margin-left: 24px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+`;
+
+export const DefinitionTitle = styled.div`
+    color: #4F7EF4;
+`;
+
+export const DefinitionButton = styled.button`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 36px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    
+`;
+
+export const DefinitionText = styled.div`
+    margin-left: 12px;
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 18px;
+
 `;
